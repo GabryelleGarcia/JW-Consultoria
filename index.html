@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="Solicite sua cotação com José Walter Carvalho. Atendimento personalizado em planos de saúde e seguros para você, sua família ou sua empresa."
+    >
+
+    <meta name="theme-color" content="#a5090d">
+
+    <title>José Walter Carvalho | Seguros e Planos de Saúde</title>
+
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <a class="pular-conteudo" href="#conteudo">
+        Pular para o conteúdo
+    </a>
+
+    <!-- ======================================
+         CABEÇALHO
+    ======================================= -->
+
+    <header class="cabecalho">
+        <div class="container cabecalho-conteudo">
+            <a
+                class="marca"
+                href="#inicio"
+                aria-label="José Walter Carvalho — início"
+            >
+                <img
+                    src="./Imagens/JWC - Logo.png"
+                    alt="José Walter Carvalho — Corretor de Seguros"
+                    width="160"
+                    height="160"
+                >
+            </a>
+
+            <nav class="navegacao" aria-label="Menu principal">
+                <a href="#solucoes">
+                    Soluções
+                </a>
+
+                <a href="#sobre">
+                    Sobre
+                </a>
+
+                <a class="botao botao-pequeno" href="#cotacao">
+                    Solicitar cotação
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <main id="conteudo">
+        <!-- ======================================
+             APRESENTAÇÃO E FORMULÁRIO
+        ======================================= -->
+
+        <section
+            class="hero"
+            id="inicio"
+            aria-labelledby="titulo-principal"
+        >
+            <div class="container hero-grid">
+                <div class="hero-texto">
+                    <span class="etiqueta">
+                        SEGUROS E PLANOS DE SAÚDE
+                    </span>
+
+                    <h1 id="titulo-principal">
+                        Proteção para sua vida.
+
+                        <span>
+                            Cuidado com cada escolha.
+                        </span>
+                    </h1>
+
+                    <p class="hero-descricao">
+                        Encontre uma solução para você, sua família ou sua
+                        empresa com orientação próxima e atendimento
+                        personalizado em cada etapa.
+                    </p>
+
+                    <a class="botao" href="#cotacao">
+                        Quero uma cotação
+
+                        <span aria-hidden="true">
+                            ↗
+                        </span>
+                    </a>
+
+                    <div class="hero-destaques">
+                        <div>
+                            <strong>
+                                20+
+                            </strong>
+
+                            <span>
+                                Anos de experiência
+                            </span>
+                        </div>
+
+                        <div>
+                            <strong>
+                                Para você
+                            </strong>
+
+                            <span>
+                                Atendimento personalizado
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ======================================
+                     FORMULÁRIO DE COTAÇÃO
+                ======================================= -->
+
+                <div class="formulario-card" id="cotacao">
+                    <span class="etiqueta">
+                        COTAÇÃO PERSONALIZADA
+                    </span>
+
+                    <h2 id="titulo-formulario">
+                        Vamos encontrar suas opções?
+                    </h2>
+
+                    <p class="formulario-introducao">
+                        Conte um pouco sobre o que você precisa.
+                        Entraremos em contato para orientar você.
+                    </p>
+
+                    <!--
+                        Substitua o endereço do action pela rota real
+                        do backend responsável pelo envio de e-mail.
+
+                        O backend precisa aceitar os dados enviados
+                        por um formulário HTML via POST.
+                    -->
+
+                    <form
+                        class="formulario"
+                        id="formulario-cotacao"
+                        action="https://SEU-BACKEND.onrender.com/enviar-lead"
+                        method="POST"
+                        aria-labelledby="titulo-formulario"
+                    >
+                        <input
+                            type="hidden"
+                            name="origem"
+                            value="Site José Walter Carvalho"
+                        >
+
+                        <div class="formulario-grid">
+                            <div class="campo">
+                                <label for="nome">
+                                    Seu nome *
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="nome"
+                                    name="nome"
+                                    autocomplete="name"
+                                    minlength="3"
+                                    maxlength="120"
+                                    required
+                                >
+                            </div>
+
+                            <div class="campo">
+                                <label for="telefone">
+                                    WhatsApp *
+                                </label>
+
+                                <input
+                                    type="tel"
+                                    id="telefone"
+                                    name="telefone"
+                                    autocomplete="tel"
+                                    inputmode="tel"
+                                    placeholder="(11) 99999-9999"
+                                    minlength="10"
+                                    maxlength="20"
+                                    required
+                                >
+                            </div>
+
+                            <div class="campo">
+                                <label for="email">
+                                    E-mail *
+                                </label>
+
+                                <input
+                                    type="email"
+                                    id="email"
+                                    name="email"
+                                    autocomplete="email"
+                                    maxlength="160"
+                                    required
+                                >
+                            </div>
+
+                            <div class="campo">
+                                <label for="idades">
+                                    Idades de quem usará o plano *
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="idades"
+                                    name="idades"
+                                    placeholder="Ex.: 32 e 8 anos"
+                                    maxlength="200"
+                                    required
+                                >
+                            </div>
+                        </div>
+
+                        <fieldset class="grupo-escolhas">
+                            <legend>
+                                Possui CNPJ? *
+                            </legend>
+
+                            <div class="opcoes">
+                                <label class="opcao" for="cnpj-sim">
+                                    <input
+                                        type="radio"
+                                        id="cnpj-sim"
+                                        name="possuiCnpj"
+                                        value="Sim"
+                                        required
+                                    >
+
+                                    <span>
+                                        Sim
+                                    </span>
+                                </label>
+
+                                <label class="opcao" for="cnpj-nao">
+                                    <input
+                                        type="radio"
+                                        id="cnpj-nao"
+                                        name="possuiCnpj"
+                                        value="Não"
+                                        required
+                                    >
+
+                                    <span>
+                                        Não
+                                    </span>
+                                </label>
+                            </div>
+                        </fieldset>
+
+                        <fieldset class="grupo-escolhas">
+                            <legend>
+                                Possui plano de saúde atualmente? *
+                            </legend>
+
+                            <div class="opcoes">
+                                <label class="opcao" for="plano-sim">
+                                    <input
+                                        type="radio"
+                                        id="plano-sim"
+                                        name="possuiPlano"
+                                        value="Sim"
+                                        required
+                                    >
+
+                                    <span>
+                                        Sim
+                                    </span>
+                                </label>
+
+                                <label class="opcao" for="plano-nao">
+                                    <input
+                                        type="radio"
+                                        id="plano-nao"
+                                        name="possuiPlano"
+                                        value="Não"
+                                        required
+                                    >
+
+                                    <span>
+                                        Não
+                                    </span>
+                                </label>
+                            </div>
+                        </fieldset>
+
+                        <div
+                            class="campo"
+                            id="campos-plano-atual"
+                            hidden
+                        >
+                            <label for="operadora-atual">
+                                Qual é sua operadora atual?
+
+                                <span class="opcional">
+                                    (opcional)
+                                </span>
+                            </label>
+
+                            <input
+                                type="text"
+                                id="operadora-atual"
+                                name="operadoraAtual"
+                                maxlength="120"
+                                disabled
+                            >
+                        </div>
+
+                        <div class="campo">
+                            <label for="preferencias">
+                                Hospital ou laboratório de preferência
+
+                                <span class="opcional">
+                                    (opcional)
+                                </span>
+                            </label>
+
+                            <input
+                                type="text"
+                                id="preferencias"
+                                name="preferencias"
+                                maxlength="300"
+                            >
+                        </div>
+
+                        <button
+                            class="botao botao-enviar"
+                            type="submit"
+                        >
+                            Solicitar cotação
+
+                            <span aria-hidden="true">
+                                ↗
+                            </span>
+                        </button>
+
+                        <p class="formulario-nota">
+                            Usaremos seus dados para responder à sua
+                            solicitação de cotação.
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- ======================================
+             SOLUÇÕES
+        ======================================= -->
+
+        <section
+            class="solucoes secao"
+            id="solucoes"
+            aria-labelledby="titulo-solucoes"
+        >
+            <div class="container">
+                <div class="titulo-secao">
+                    <span class="etiqueta">
+                        SOLUÇÕES PARA CADA MOMENTO
+                    </span>
+
+                    <h2 id="titulo-solucoes">
+                        Seu próximo passo começa com uma boa orientação.
+                    </h2>
+
+                    <p>
+                        Conheça as possibilidades e solicite uma análise
+                        de acordo com o que você precisa proteger.
+                    </p>
+                </div>
+
+                <div class="servicos-grid">
+                    <article class="servico-card">
+                        <span
+                            class="servico-numero"
+                            aria-hidden="true"
+                        >
+                            01
+                        </span>
+
+                        <h3>
+                            Saúde para você e sua família
+                        </h3>
+
+                        <p>
+                            Orientação para avaliar rede de atendimento,
+                            abrangência e condições dos planos disponíveis.
+                        </p>
+
+                        <a href="#cotacao">
+                            Cotar plano de saúde
+
+                            <span aria-hidden="true">
+                                ↗
+                            </span>
+                        </a>
+                    </article>
+
+                    <article class="servico-card">
+                        <span
+                            class="servico-numero"
+                            aria-hidden="true"
+                        >
+                            02
+                        </span>
+
+                        <h3>
+                            Saúde para sua empresa
+                        </h3>
+
+                        <p>
+                            Opções para MEI e empresas, conforme os critérios
+                            de elegibilidade e as necessidades da equipe.
+                        </p>
+
+                        <a href="#cotacao">
+                            Consultar opções empresariais
+
+                            <span aria-hidden="true">
+                                ↗
+                            </span>
+                        </a>
+                    </article>
+
+                    <article class="servico-card">
+                        <span
+                            class="servico-numero"
+                            aria-hidden="true"
+                        >
+                            03
+                        </span>
+
+                        <h3>
+                            Seguros para seu dia a dia
+                        </h3>
+
+                        <p>
+                            Proteção para sua vida, seu carro e sua casa,
+                            com orientação sobre coberturas e condições.
+                        </p>
+
+                        <a href="#sobre">
+                            Conhecer o corretor
+
+                            <span aria-hidden="true">
+                                ↗
+                            </span>
+                        </a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ======================================
+             SOBRE O CORRETOR
+        ======================================= -->
+
+        <section
+            class="sobre secao"
+            id="sobre"
+            aria-labelledby="titulo-sobre"
+        >
+            <div class="container sobre-grid">
+                <div class="sobre-identidade">
+                    <span class="etiqueta">
+                        EXPERIÊNCIA QUE APROXIMA
+                    </span>
+
+                    <h2 id="titulo-sobre">
+                        José Walter Carvalho
+                    </h2>
+
+                    <p class="sobre-cargo">
+                        Corretor de seguros
+                    </p>
+
+                    <div
+                        class="sobre-linha"
+                        aria-hidden="true"
+                    ></div>
+
+                    <p>
+                        Mais de 20 anos de experiência no mercado de
+                        planos de saúde.
+                    </p>
+                </div>
+
+                <div class="sobre-texto">
+                    <h3>
+                        Escolher bem fica mais simples com alguém ao seu lado.
+                    </h3>
+
+                    <p>
+                        Cada pessoa, família e empresa tem uma necessidade.
+                        Por isso, o atendimento começa com uma conversa
+                        para entender suas prioridades e apresentar
+                        alternativas que façam sentido para você.
+                    </p>
+
+                    <p>
+                        Da primeira cotação às dúvidas sobre a contratação,
+                        conte com uma orientação clara para tomar sua decisão.
+                    </p>
+
+                    <a class="link-texto" href="#cotacao">
+                        Vamos conversar sobre seu plano de saúde
+
+                        <span aria-hidden="true">
+                            ↗
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ======================================
+             ETAPAS DO ATENDIMENTO
+        ======================================= -->
+
+        <section
+            class="etapas secao"
+            aria-labelledby="titulo-etapas"
+        >
+            <div class="container">
+                <div class="titulo-secao">
+                    <span class="etiqueta">
+                        SIMPLES, DO INÍCIO AO FIM
+                    </span>
+
+                    <h2 id="titulo-etapas">
+                        Como funciona o atendimento
+                    </h2>
+                </div>
+
+                <ol class="etapas-lista">
+                    <li>
+                        <span
+                            class="etapa-numero"
+                            aria-hidden="true"
+                        >
+                            1
+                        </span>
+
+                        <h3>
+                            Conte o que precisa
+                        </h3>
+
+                        <p>
+                            Preencha o formulário com seus dados e as
+                            informações de quem usará o plano.
+                        </p>
+                    </li>
+
+                    <li>
+                        <span
+                            class="etapa-numero"
+                            aria-hidden="true"
+                        >
+                            2
+                        </span>
+
+                        <h3>
+                            Receba uma orientação
+                        </h3>
+
+                        <p>
+                            Conversamos para entender seu perfil e
+                            avaliar as opções disponíveis.
+                        </p>
+                    </li>
+
+                    <li>
+                        <span
+                            class="etapa-numero"
+                            aria-hidden="true"
+                        >
+                            3
+                        </span>
+
+                        <h3>
+                            Escolha com clareza
+                        </h3>
+
+                        <p>
+                            Conheça as condições da proposta e tire
+                            suas dúvidas antes de contratar.
+                        </p>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- ======================================
+             CHAMADA FINAL
+        ======================================= -->
+
+        <section
+            class="chamada-final"
+            aria-labelledby="titulo-chamada"
+        >
+            <div class="container chamada-conteudo">
+                <div>
+                    <h2 id="titulo-chamada">
+                        Vamos cuidar da sua próxima escolha?
+                    </h2>
+
+                    <p>
+                        Solicite uma cotação de plano de saúde e receba
+                        atendimento personalizado.
+                    </p>
+                </div>
+
+                <a class="botao botao-claro" href="#cotacao">
+                    Solicitar cotação
+
+                    <span aria-hidden="true">
+                        ↗
+                    </span>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- ======================================
+         RODAPÉ E CONTATOS
+    ======================================= -->
+
+    <footer class="rodape">
+        <div class="container rodape-conteudo">
+            <div>
+                <p class="rodape-nome">
+                    José Walter Carvalho
+                </p>
+
+                <p>
+                    Corretor de seguros
+                </p>
+            </div>
+
+            <div class="rodape-contatos">
+                <h2>
+                    Entre em contato
+                </h2>
+
+                <a href="tel:+5511974659580">
+                    Telefone: (11) 97465-9580
+                </a>
+
+                <a
+                    href="https://wa.me/5511974659580"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    WhatsApp: (11) 97465-9580
+                </a>
+
+                <a href="mailto:jwaltercarvalho@gmail.com">
+                    jwaltercarvalho@gmail.com
+                </a>
+            </div>
+
+            <a href="#inicio">
+                Voltar ao início ↑
+            </a>
+        </div>
+
+        <div class="container rodape-informacoes">
+            <p>
+                Valores, coberturas, carências e disponibilidade variam
+                conforme o produto e as condições da contratação.
+            </p>
+        </div>
+    </footer>
+
+    <!-- ======================================
+         EXIBIÇÃO DO CAMPO DE OPERADORA ATUAL
+    ======================================= -->
+
+    <script>
+        const formularioCotacao = document.getElementById(
+            "formulario-cotacao"
+        );
+
+        const camposPlanoAtual = document.getElementById(
+            "campos-plano-atual"
+        );
+
+        const operadoraAtual = document.getElementById(
+            "operadora-atual"
+        );
+
+        function atualizarCampoOperadora() {
+            const possuiPlano = formularioCotacao.querySelector(
+                'input[name="possuiPlano"]:checked'
+            );
+
+            const mostrarCampo = possuiPlano?.value === "Sim";
+
+            camposPlanoAtual.hidden = !mostrarCampo;
+
+            operadoraAtual.disabled = !mostrarCampo;
+
+            if (!mostrarCampo) {
+                operadoraAtual.value = "";
+            }
+        }
+
+        formularioCotacao.addEventListener(
+            "change",
+            atualizarCampoOperadora
+        );
+
+        window.addEventListener(
+            "pageshow",
+            atualizarCampoOperadora
+        );
+
+        atualizarCampoOperadora();
+    </script>
+</body>
+
+</html>
